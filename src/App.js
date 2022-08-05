@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home.js'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import WaterSoftener from './components/Products/WaterSoftener'
+import RO from './components/Products/RO'
+import Bidet from './components/Products/Bidet'
+import IceMaker from './components/Products/IceMaker'
+import {ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/water-softener" element={<WaterSoftener />}/>
+          <Route path="/bidet" element={<Bidet />}/>
+          <Route path="/ro" element={<RO />}/>
+          <Route path="/ice-maker" element={<IceMaker />}/>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
