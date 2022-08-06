@@ -28,7 +28,7 @@ function Main2(){
         rightContainer:{
             width:'30%',
             textAlign:'center',
-            backgroundColor:'#1F2833',
+            backgroundColor:'#0B0C10',
         },
         serviceCartoon:{
             width:'40px',
