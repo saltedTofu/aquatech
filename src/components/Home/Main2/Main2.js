@@ -45,7 +45,7 @@ function Main2(){
         }
     }
     return(
-        <div style={styles.main1Container}>
+        <div style={styles.main1Container} id="services">
             <Paper square sx={styles.leftContainer}>
                 <Typography variant="h4">Our Services</Typography>
                 <div style={styles.serviceDescription}>

@@ -25,7 +25,7 @@ function Main1(){
         }
     }
     return(
-        <div style={styles.main1Container}>
+        <div style={styles.main1Container} id='about'>
             <Paper square sx={styles.leftContainer}>
                 <Typography variant="h4">OUR VISION</Typography>
                 <Typography variant="p">Phasellus eu risus est. In nulla neque, vestibulum sed aliquet a, gravida ac augue. Mauris vehicula lacus lorem, non consectetur lorem placerat interdum. Morbi lacus lectus, vulputate nec molestie sit amet, pretium sit amet diam. Vestibulum est nisl, ornare id nibh sit amet, imperdiet auctor dui. Donec lorem erat, euismod elementum leo quis, bibendum commodo tortor. Pellentesque sollicitudin dictum lorem, non aliquet augue fermentum eu. Mauris dolor massa, condimentum ut ultricies vitae, rhoncus nec nisl. Aliquam erat volutpat. Aliquam erat volutpat. Maecenas lacinia cursus venenatis. Fusce at malesuada risus. Duis venenatis est eget urna eleifend varius. Suspendisse aliquam accumsan lacinia. Mauris vitae blandit sapien. Nunc fermentum pellentesque est sed blandit.</Typography>

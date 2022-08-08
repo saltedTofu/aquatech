@@ -5,6 +5,7 @@ import {Link as RouterLink, useNavigate} from 'react-router-dom';
 import {useState} from 'react'
 import Phone from '../../utils/phone.png'
 import Logo from '../../utils/headerLogo.png'
+import { HashLink } from 'react-router-hash-link';
 
 function Header(){
     const [anchorEl, setAnchorEl] = useState(null);
@@ -67,8 +68,8 @@ function Header(){
             <Paper square sx={styles.headerContainer}>
                 <nav style={styles.navStyle}>
                     <RouterLink to='/'><img alt="aquatech logo" src={Logo} style={styles.logoStyle}></img></RouterLink>
-                    <Link variant="h5">About</Link>
-                    <Link variant="h5">Services</Link>
+                    <HashLink to="/#about"><Link variant="h5">About</Link></HashLink>
+                    <HashLink to="/#services"><Link variant="h5">Services</Link></HashLink>
                     <Link
                         id="basic-button"
                         aria-controls={open ? 'basic-menu' : undefined}
@@ -95,7 +96,7 @@ function Header(){
                         <MenuItem sx={styles.menuItem} onClick={()=>{return navigate('/ro')}}>RO <ArrowForwardIosIcon color="primary" fontSize='small' sx={{marginLeft:'10px'}}/></MenuItem>
                         <MenuItem sx={styles.menuItem} onClick={()=>{return navigate('/ice-maker')}}>Ice Maker <ArrowForwardIosIcon color="primary" fontSize='small' sx={{marginLeft:'10px'}}/></MenuItem>
                     </Menu>
-                    <Link variant="h5">Contact</Link>
+                    <HashLink to="/#contact"><Link variant="h5">Contact</Link></HashLink>
                     <div style={styles.empty}>
                     </div>
                     <div style={styles.phoneDiv}>

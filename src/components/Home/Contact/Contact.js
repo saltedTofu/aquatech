@@ -52,7 +52,7 @@ function Contact(){
         }
     }
     return(
-        <div style={styles.outerContainer}>
+        <div style={styles.outerContainer} id="contact">
             <Typography variant="h4">Contact Us</Typography>
             <Paper sx={styles.mainContainer} square>
                 <form name="contact" method="POST" data-netlify="true" >
