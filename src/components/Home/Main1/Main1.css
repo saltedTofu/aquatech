@@ -1,0 +1,23 @@
+.main1Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left1Container {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 40%;
+  text-align: center;
+}
+
+.right1Container {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 60%;
+  text-align: center;
+}/*# sourceMappingURL=Main1.css.map */

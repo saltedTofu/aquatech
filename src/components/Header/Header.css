@@ -1,0 +1,142 @@
+.webContainer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 10%;
+  min-height: 100px;
+  flex-Direction: row;
+  align-Items: center;
+}
+
+.navStyle {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.logoStyle {
+  width: 110px;
+}
+
+.phoneDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneImage {
+  width: 40px;
+  margin-right: 12px;
+}
+
+.empty {
+  opacity: 0;
+  width: 200px;
+}
+
+.productDropDown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLink {
+  font-size: 2em;
+}
+
+.mobileContainer {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navLink {
+    font-size: 1.5em;
+  }
+  .productDropDown {
+    font-size: 1.5em;
+  }
+  .empty {
+    width: 125px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .navLink {
+    font-size: 1.3em;
+  }
+  .productDropDown {
+    font-size: 1.3em;
+  }
+  .empty {
+    display: none;
+  }
+  .logoStyle {
+    width: 85px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .navLink {
+    font-size: 1.2em;
+  }
+  .productDropDown {
+    font-size: 1.2em;
+  }
+  .empty {
+    width: 100px;
+  }
+  .logoStyle {
+    width: 75px;
+  }
+  .phoneImage {
+    width: 25px;
+  }
+  #phoneNumber {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navLink {
+    display: none;
+  }
+  .productDropDown {
+    font-size: 1.5em;
+  }
+  .empty {
+    width: 100px;
+  }
+  .logoStyle {
+    width: 95px;
+  }
+  .phoneImage {
+    width: 40px;
+  }
+  #phoneNumber {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .webContainer {
+    display: none;
+    position: static;
+  }
+  .mobileContainer {
+    display: flex;
+  }
+}/*# sourceMappingURL=Header.css.map */

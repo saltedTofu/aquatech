@@ -1,53 +1,26 @@
 import {Paper,Typography, Card} from '@mui/material';
+import {useState} from 'react'
+import './Product.css'
 
-function Product({picture,name,description,price}){
+function Product({picture1,picture2,picture3,name,description,price}){
 
-    const styles={
-        divContainer:{
-            paddingTop:'10%',
-            display:'flex',
-            flexDirection:'row',
-            alignItems:'center',
-            justifyContent:'center',
-            textAlign:'center'
-        },
-        productContainer:{
-            width:'50%',
-            minWidth:'400px',
-            display:'flex',
-            flexDirection:'row',
-            alignItems:'flex-start',
-            justifyContent:'center',
-        },
-        productImageContainer:{
-            width:'50%',
-            display:'flex',
-            flexDirection:'row',
-            alignItems:'center',
-            justifyContent:'center',
-        },
-        productInfo:{
-            display:'flex',
-            flexDirection:'column',
-            alignItems:'center',
-            justifyContent:'center',
-            width:'40%',
-        },
-        productImage:{
-            width:'200px'
-        }
-    }
+    const [primaryImage,setPrimaryImage] = useState(picture1)
 
     return(
-        <div style={styles.divContainer}>
-            <Paper sx={styles.productContainer} elevation={3}>
-                <div style={styles.productImageContainer}>
-                    <img style={styles.productImage} src={picture} alt='Product'></img>
-                </div>
+        <div className="divContainer">
+            <Paper elevation={3} className="productContainer">
+                <Card raised className="productImageContainer">
+                    <img src={primaryImage} alt='Product' className="productImage"></img>
+                    <Card raised className="lowerImages">
+                        <img  src={picture1} className="lowerProductImage" alt='Product' onMouseEnter={()=>{setPrimaryImage(picture1)}}></img>
+                        <img  src={picture2} className="lowerProductImage" alt='Product' onMouseEnter={()=>{setPrimaryImage(picture2)}}></img>
+                        <img  src={picture3} className="lowerProductImage" alt='Product' onMouseEnter={()=>{setPrimaryImage(picture3)}}></img>
+                    </Card>
+                </Card>
                 
-                <div style={styles.productInfo}>
-                    <Typography variant="h4" sx={{marginBottom:'5px', marginTop:'20px'}}>{name}</Typography>
-                    <Typography variant="h5" sx={{marginBottom:'40px'}}>{price}</Typography>
+                <div className="productInfo">
+                    <Typography variant="h4">{name}</Typography>
+                    <Typography variant="h5">{price}</Typography>
                     <Typography variant="p">{description}</Typography>
                 </div>
             </Paper>

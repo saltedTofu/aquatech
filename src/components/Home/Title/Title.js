@@ -13,47 +13,15 @@ import 'swiper/css/pagination';
 import './Title.css'
 import {Button, Typography} from '@mui/material'
 
-const styles={
-    container:{
-        display:'flex',
-        flexDirection:'row',
-        width:'100%',
-        paddingTop:'10%',
-    },
-    leftTitle:{
-        display:'flex',
-        flexDirection:'column',
-        width:'50%',
-        alignItems:'center',
-        textAlign:'center',
-        justifyContent:'center'
-    },
-    rightTitle:{
-        display:'flex',
-        flexDirection:'column',
-        width:'50%',
-        alignItems:'center',
-        justifyContent:'center',
-        textAlign:'center'
-    },
-    logo:{
-        width:'420px'
-    },
-    stream:{
-        width:'200px',
-        marginTop:'30px',
-        marginBottom:'30px'
-    }
-}
 function Title(){
     return(
-        <div style={styles.container}>
-            <div style={styles.leftTitle}>
-                <img src={Logo} alt='aqua tech texas logo' style={styles.logo}></img>
+        <div className="container">
+            <div className="leftTitle">
+                <img src={Logo} alt='aqua tech texas logo' className="logo"></img>
                 <Typography variant="h4">Quality Water Filtration Systems, Professional Installation and Maintenance</Typography>
-                <img src={Stream} style={styles.stream}alt="graphic line"/>
+                <img src={Stream} className="stream" alt="graphic line"/>
             </div>
-            <div style={styles.rightTitle}>
+            <div className="rightTitle">
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -68,7 +36,7 @@ function Title(){
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    <SwiperSlide><img alt="man installing water softener" src={NiceMan}/></SwiperSlide>
+                    <SwiperSlide><img alt="man installing water softener" src={NiceMan} /></SwiperSlide>
                     <SwiperSlide><img alt="main standing next to truck" src={TruckMan}/></SwiperSlide>
                     <SwiperSlide><img alt="owner and founder" src={Yang}/></SwiperSlide>
                 </Swiper>

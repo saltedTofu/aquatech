@@ -5,69 +5,35 @@ import Sprinkler from '../../../utils/sprinkler.png'
 import Vent from '../../../utils/vent.png'
 import Tap from '../../../utils/Tap.png'
 
+import './Main2.css'
+
 function Main2(){
 
-    const styles={
-        main1Container:{
-            display:'flex',
-            flexDirection:'row'
-        },
-        leftContainer:{
-            paddingBottom:'50px',
-            paddingTop:'50px',
-            paddingLeft:'15px',
-            paddingRight:'15px',
-            width:'70%',
-            textAlign:'center',
-            backgroundColor:'#1F2833',
-            display:'flex',
-            flexDirection:'column',
-            justifyContent:'center',
-            alignItems:'center'
-        },
-        rightContainer:{
-            width:'30%',
-            textAlign:'center',
-            backgroundColor:'#0B0C10',
-        },
-        serviceCartoon:{
-            width:'40px',
-            marginRight:'10px'
-        },
-        serviceDescription:{
-            display:'flex',
-            flexDirection:'row',
-            marginTop:'5px',
-            marginBottom:'5px'
-        },
-        serviceImage:{
-            width:'400px',
-        }
-    }
+    
     return(
-        <div style={styles.main1Container} id="services">
-            <Paper square sx={styles.leftContainer}>
+        <div className="main2Container" id="services">
+            <Paper square className="left2Container">
                 <Typography variant="h4">Our Services</Typography>
-                <div style={styles.serviceDescription}>
-                    <img src={Tap} style={styles.serviceCartoon}></img>
+                <div className="serviceDescription">
+                    <img src={Tap} className="serviceCartoon" alt='tap'></img>
                     <Typography>Maintenance: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus venenatis ex, tincidunt sodales magna suscipit ac.</Typography>
                 </div>
-                <div style={styles.serviceDescription}>
-                    <img src={Sprinkler} style={styles.serviceCartoon}></img>
+                <div className="serviceDescription">
+                    <img src={Sprinkler} className="serviceCartoon" alt="sprinkler"></img>
                     <Typography>Maintenance: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus venenatis ex, tincidunt sodales magna suscipit ac.</Typography>
                 </div>
-                <div style={styles.serviceDescription}>
-                    <img src={Vent} style={styles.serviceCartoon}></img>
+                <div className="serviceDescription">
+                    <img src={Vent} className="serviceCartoon" alt="vent"></img>
                     <Typography>Maintenance: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus venenatis ex, tincidunt sodales magna suscipit ac.</Typography>
                 </div>
-                <div style={styles.serviceDescription}>
-                    <img src={Sink} style={styles.serviceCartoon}></img>
+                <div className="serviceDescription">
+                    <img src={Sink} className="serviceCartoon" alt="sink"></img>
                     <Typography>Maintenance: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus venenatis ex, tincidunt sodales magna suscipit ac.</Typography>
                 </div>
                 
             </Paper>
-            <Paper square sx={styles.rightContainer}>
-                <img src={ServiceImage} style={styles.serviceImage}></img>
+            <Paper square className="right2Container">
+                <img src={ServiceImage} className="serviceImage" alt="installation"></img>
             </Paper>
         </div>
     )

@@ -1,0 +1,36 @@
+
+.main2Container{
+    display:flex;
+    flex-direction:row
+}
+.left2Container{
+    padding-bottom:50px;
+    padding-top:50px;
+    padding-left:15px;
+    padding-right:15px;
+    width:70%;
+    text-align:center;
+    background-color:#1F2833;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center
+}
+.right2Container{
+    width:30%;
+    text-align:center;
+    background-color:#0B0C10;
+}
+.serviceCartoon{
+    width:40px;
+    margin-right:10px
+}
+.serviceDescription{
+    display:flex;
+    flex-direction:row;
+    margin-top:5px;
+    margin-bottom:5px
+}
+.serviceImage{
+    width:400px;
+}

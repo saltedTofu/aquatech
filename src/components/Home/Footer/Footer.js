@@ -1,29 +1,14 @@
 import {Link, Typography} from '@mui/material';
-
+import './Footer.css'
 function Footer(){
 
-    const styles={
-        footer:{
-            width:'100%',
-            paddingTop:'1%'
-        },
-        socials:{
-            display:'flex',
-            flexDirection:'row',
-            justifyContent: 'center'
-        },
-        copyright:{
-            textAlign: 'center',
-            padding:'15px'
-        }
-    }
     return(
-        <footer style={styles.footer}>
-            <div style={styles.socials}>
+        <footer>
+            <div className="socials">
                 <Link sx={{marginRight:'10px'}}>Instagram</Link>
                 <Link>Facebook</Link>
             </div>
-            <Typography sx={styles.copyright}>© 2022 Aquatech Texas | Sugar Land, TX Water Softening Product and Installation</Typography>
+            <Typography className="copyright">© 2022 Aquatech Texas | Sugar Land, TX Water Softening Product and Installation</Typography>
         </footer>
     )
     
