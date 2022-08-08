@@ -18,7 +18,10 @@
 }
 .right2Container{
     width:30%;
-    text-align:center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color:#0B0C10;
 }
 .serviceCartoon{
@@ -34,3 +37,50 @@
 .serviceImage{
     width:400px;
 }
+
+@media only screen and (max-width:1370px){
+    .left2Container{
+        width:50%;
+    }
+    .right2Container{
+        width:50%;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .serviceImage{
+        width:300px;
+    }
+}
+
+@media only screen and (max-width:715px){
+    .main2Container{
+        flex-direction:column;
+    }
+    .left2Container{
+        width:100%;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .right2Container{
+        width:100%;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .serviceCartoon{
+        margin-right:0px;
+    }
+    .serviceImage{
+        width:375px;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width:545px){
+    .serviceDescription{
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

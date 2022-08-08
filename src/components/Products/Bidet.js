@@ -1,7 +1,6 @@
 import Header from '../Header/Header'
 import Product from './Product/Product'
 import {Paper} from '@mui/material';
-import ProductImage from '../../utils/productImage.png'
 import ProductImage1 from '../../utils/product1.png'
 import ProductImage2 from '../../utils/product2.png'
 import ProductImage3 from '../../utils/product3.png'

@@ -18,7 +18,7 @@ function Title(){
         <div className="container">
             <div className="leftTitle">
                 <img src={Logo} alt='aqua tech texas logo' className="logo"></img>
-                <Typography variant="h4">Quality Water Filtration Systems, Professional Installation and Maintenance</Typography>
+                <Typography className="titleText">Quality Water Filtration Systems, Professional Installation and Maintenance</Typography>
                 <img src={Stream} className="stream" alt="graphic line"/>
             </div>
             <div className="rightTitle">
@@ -36,7 +36,7 @@ function Title(){
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    <SwiperSlide><img alt="man installing water softener" src={NiceMan} /></SwiperSlide>
+                    <SwiperSlide><img alt="man installing water softener" src={NiceMan}/></SwiperSlide>
                     <SwiperSlide><img alt="main standing next to truck" src={TruckMan}/></SwiperSlide>
                     <SwiperSlide><img alt="owner and founder" src={Yang}/></SwiperSlide>
                 </Swiper>

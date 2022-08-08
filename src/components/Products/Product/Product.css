@@ -49,4 +49,25 @@
 .lowerProductImage {
   width: 30%;
   margin: 2px;
+}
+
+@media only screen and (max-width: 950px) {
+  .divContainer {
+    padding-top: 17%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .divContainer {
+    padding-top: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .divContainer {
+    padding-top: 25%;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .divContainer {
+    padding-top: 20%;
+  }
 }/*# sourceMappingURL=Product.css.map */

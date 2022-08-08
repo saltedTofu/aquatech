@@ -9,8 +9,21 @@ import Logo from '../../utils/headerLogo.png'
 import { HashLink } from 'react-router-hash-link';
 import './Header.css'
 
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+
 function Header(){
     const [anchorEl, setAnchorEl] = useState(null);
+    const [drawer,setDrawer] = useState(false);
     
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -20,6 +33,10 @@ function Header(){
         setAnchorEl(null);
     };
     let navigate = useNavigate();
+
+    const toggleDrawer = () => {
+        setDrawer(!drawer)
+    }
 
     return(
         <header>
@@ -75,6 +92,7 @@ function Header(){
                             color="inherit"
                             aria-label="menu"
                             sx={{ mr: 2 }}
+                            onClick={toggleDrawer}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -84,6 +102,23 @@ function Header(){
                         </div>
                     </Toolbar>
                 </AppBar>
+                <Drawer
+                    anchor={'left'}
+                    open={drawer}
+                    onClose={toggleDrawer}
+                    >
+                    <MenuItem><HashLink to='/' className="drawerItem" onClick={toggleDrawer}><Link>Home</Link></HashLink></MenuItem>
+                    <MenuItem><HashLink to='/#about' className="drawerItem" onClick={toggleDrawer}><Link>About</Link></HashLink></MenuItem>
+                    <MenuItem><HashLink to='/#services' className="drawerItem" onClick={toggleDrawer}><Link>Services</Link></HashLink></MenuItem>
+                    <MenuItem><HashLink to='/#contact' className="drawerItem" onClick={toggleDrawer}><Link>Contact</Link></HashLink></MenuItem>
+                    <Typography variant="h5" sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center', textDecoration:'underline'}}>Products<ArrowDropDownIcon /></Typography>
+                    <div className="drawerProducts">
+                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/water-softener')}}><Link>Water Softener</Link></MenuItem>
+                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/bidet')}}><Link>Bidet</Link></MenuItem>
+                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/RO')}}><Link>RO</Link></MenuItem>
+                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/ice-maker')}}><Link>Ice Maker</Link></MenuItem>
+                    </div>
+                </Drawer>
             </div>
 
         </header>

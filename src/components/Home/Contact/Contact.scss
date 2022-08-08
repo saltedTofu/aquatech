@@ -43,3 +43,23 @@
     box-sizing: 5px 5px 8px black;
     margin:15px
 }
+
+@media only screen and (max-width:850px){
+    .contactForm{
+        padding:20px;
+    }
+    .contactFormImage{
+        width:60px;
+    }
+}
+@media only screen and (max-width:730px){
+    .mainContainer{
+        flex-direction: column;
+    }
+    .contactForm{
+        margin-top:20px;
+    }
+    .contactUs{
+        padding-top:2%;
+    }
+}
