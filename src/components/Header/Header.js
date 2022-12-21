@@ -106,21 +106,20 @@ function Header(){
                     anchor={'left'}
                     open={drawer}
                     onClose={toggleDrawer}
-                    >
+                >
                     <MenuItem><HashLink to='/' className="drawerItem" onClick={toggleDrawer}><Link>Home</Link></HashLink></MenuItem>
                     <MenuItem><HashLink to='/#about' className="drawerItem" onClick={toggleDrawer}><Link>About</Link></HashLink></MenuItem>
                     <MenuItem><HashLink to='/#services' className="drawerItem" onClick={toggleDrawer}><Link>Services</Link></HashLink></MenuItem>
                     <MenuItem><HashLink to='/#contact' className="drawerItem" onClick={toggleDrawer}><Link>Contact</Link></HashLink></MenuItem>
-                    <Typography variant="h5" sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center', textDecoration:'underline'}}>Products<ArrowDropDownIcon /></Typography>
+                    <Typography variant="h6" sx={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center', textDecoration:'underline'}}>Products<ArrowDropDownIcon /></Typography>
                     <div className="drawerProducts">
-                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/water-softener')}}><Link>Water Softener</Link></MenuItem>
-                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/bidet')}}><Link>Bidet</Link></MenuItem>
-                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/RO')}}><Link>RO</Link></MenuItem>
-                        <MenuItem className="mobileProductLink"  onClick={()=>{return navigate('/ice-maker')}}><Link>Ice Maker</Link></MenuItem>
+                        <MenuItem onClick={()=>{return navigate('/water-softener')}}><Link>Water Softener</Link></MenuItem>
+                        <MenuItem onClick={()=>{return navigate('/bidet')}}><Link>Bidet</Link></MenuItem>
+                        <MenuItem onClick={()=>{return navigate('/RO')}}><Link>RO</Link></MenuItem>
+                        <MenuItem onClick={()=>{return navigate('/ice-maker')}}><Link>Ice Maker</Link></MenuItem>
                     </div>
                 </Drawer>
             </div>
-
         </header>
     )
 }

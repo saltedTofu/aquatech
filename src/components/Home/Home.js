@@ -1,4 +1,4 @@
-import {Paper} from '@mui/material'
+import {Paper, Box} from '@mui/material'
 import Header from '../Header/Header'
 import Title from './Title/Title'
 import Main1 from './Main1/Main1'
@@ -15,14 +15,18 @@ function Home(){
         }
     }
     return(
-        <Paper square className="Home" sx={styles.home}>
+        <Box className="Home" 
+            sx={{
+                ...styles.home,
+            }}
+        >
             <Header />
             <Title />
             <Main1 />
             <Main2 />
             <Contact />
             <Footer />
-        </Paper>
+        </Box>
     )
 }
 

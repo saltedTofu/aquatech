@@ -11,11 +11,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Title.css'
-import {Button, Typography} from '@mui/material'
+import {Button, Typography, Box} from '@mui/material'
 
 function Title(){
     return(
-        <div className="container">
+        <Box 
+            sx={{ bgcolor: 'primary.main' }} 
+            className="container"
+        >
             <div className="leftTitle">
                 <img src={Logo} alt='aqua tech texas logo' className="logo"></img>
                 <Typography className="titleText">Quality Water Filtration Systems, Professional Installation and Maintenance</Typography>
@@ -41,7 +44,7 @@ function Title(){
                     <SwiperSlide><img alt="owner and founder" src={Yang}/></SwiperSlide>
                 </Swiper>
             </div>
-        </div>
+        </Box>
     )
 }
 

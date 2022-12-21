@@ -1,4 +1,4 @@
-import {Paper, Typography} from '@mui/material'
+import {Paper, Typography, Box} from '@mui/material'
 import ServiceImage from '../../../utils/waterSoftener.jpg'
 import Sink from '../../../utils/sink.png'
 import Sprinkler from '../../../utils/sprinkler.png'
@@ -12,7 +12,10 @@ function Main2(){
     
     return(
         <div className="main2Container" id="services">
-            <Paper square className="left2Container">
+            <Box 
+                className="left2Container"
+                sx={{ bgcolor: 'secondary.main' }}
+            >
                 <Typography variant="h4">Our Services</Typography>
                 <div className="serviceDescription">
                     <img src={Tap} className="serviceCartoon" alt='tap'></img>
@@ -31,10 +34,10 @@ function Main2(){
                     <Typography>Maintenance: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus venenatis ex, tincidunt sodales magna suscipit ac.</Typography>
                 </div>
                 
-            </Paper>
-            <Paper square className="right2Container">
+            </Box>
+            <Box className="right2Container" sx={{ bgcolor: 'secondary.main' }}>
                 <img src={ServiceImage} className="serviceImage" alt="installation"></img>
-            </Paper>
+            </Box>
         </div>
     )
 }

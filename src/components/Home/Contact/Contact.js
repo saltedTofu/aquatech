@@ -1,4 +1,4 @@
-import {Paper, Typography, Button, TextField, Link} from '@mui/material'
+import {Paper, Typography, Button, TextField, Link, Box} from '@mui/material'
 import Form from '../../../utils/form.png'
 import Yang from '../../../utils/yang.jpg'
 import './Contact.css'
@@ -6,9 +6,9 @@ import './Contact.css'
 function Contact(){
 
     return(
-        <div className="outerContainer" id="contact">
+        <Box className="outerContainer" id="contact" sx={{ bgcolor: 'primary.main' }}>
             <Typography variant="h4">Contact Us</Typography>
-            <Paper className="mainContainer" square>
+            <Box className="mainContainer">
                 <form name="contact" method="POST" data-netlify="true" >
                     <Paper className="contactForm"elevation={5}>
                         <img src={Form} alt="clipboard" className="contactFormImage"/>
@@ -26,7 +26,7 @@ function Contact(){
                         <Button type="submit" variant="contained" id="submitForm">Send</Button>
                     </Paper>
                 </form>
-                <div className="contactUs">
+                <Box className="contactUs">
                     <h2>Contact Us Directly</h2>
                     <img src={Yang} alt="owner and founder" className="contactUsImg"/>
                     <Typography variant="p">10600 Bellaire Blvd. Ste 140</Typography>
@@ -37,9 +37,9 @@ function Contact(){
                     <Typography variant="p">Cell: 832-867-9662</Typography>
                     <Link href = "mailto: aquatechHTX@gmail.com">aquatechHTX@gmail.com</Link>
                     <Typography variant="p">Ask for Joseph</Typography>
-                </div>
-            </Paper>
-        </div>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 export default Contact;
